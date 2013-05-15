@@ -1,0 +1,67 @@
+package XMoOres;
+
+/*
+ * Basic importing
+ */
+
+import net.minecraft.block.Block;
+import net.minecraft.item.EnumToolMaterial;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemFood;
+import net.minecraft.item.ItemStack;
+import net.minecraftforge.common.EnumHelper;
+import cpw.mods.fml.common.Mod;
+import cpw.mods.fml.common.Mod.Init;
+import cpw.mods.fml.common.event.FMLInitializationEvent;
+import cpw.mods.fml.common.network.NetworkMod;
+import cpw.mods.fml.common.registry.GameRegistry;
+import cpw.mods.fml.common.registry.LanguageRegistry;
+
+/*
+ * Basic needed forge stuff
+ */
+@Mod(modid="XMoOres",name="X-Mo' Ores",version="v1")
+@NetworkMod(clientSideRequired=true,serverSideRequired=false)
+
+public class mod_XMoOres {
+  
+	/*
+	 * ToolMaterial
+	 */
+	
+	//Telling forge that we are creating these
+	
+	public static Item Sapphire;
+	public static Item Zircon;
+	public static Item Ruby;
+	public static Item Turqouise;
+	public static Item Amber;
+	public static Item Platinum;
+	public static Item Topaz;
+	
+	//Declaring Initialization
+	@Init
+	public void load(FMLInitializationEvent event){
+	// define items/blocks
+		
+		Sapphire = new OreItem(2500).setUnlocalizedName("Sapphire");
+		Zircon = new OreItem(2501).setUnlocalizedName("Zircon");
+		Ruby = new OreItem(2502).setUnlocalizedName("Ruby");
+		Turqouise = new OreItem(2503).setUnlocalizedName("Turqouise");
+		Amber = new OreItem(2504).setUnlocalizedName("Amber");
+		Platinum = new OreItem(2505).setUnlocalizedName("Platinum");
+		Topaz = new OreItem(2506).setUnlocalizedName("Topaz");
+		
+		//adding names
+		
+		LanguageRegistry.addName(Sapphire, "Sapphire");
+		LanguageRegistry.addName(Zircon, "Zircon");
+		LanguageRegistry.addName(Ruby, "Ruby");
+		LanguageRegistry.addName(Turqouise, "Turqouise");
+		LanguageRegistry.addName(Amber, "Amber");
+		LanguageRegistry.addName(Platinum, "Platinum");
+		LanguageRegistry.addName(Topaz, "Topaz");
+		
+		//crafting
+	}
+}
