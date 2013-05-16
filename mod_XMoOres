@@ -24,7 +24,7 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 @NetworkMod(clientSideRequired=true,serverSideRequired=false)
 
 public class mod_XMoOres {
-  
+	
 	/*
 	 * ToolMaterial
 	 */
@@ -33,11 +33,21 @@ public class mod_XMoOres {
 	
 	public static Item Sapphire;
 	public static Item Zircon;
-	public static Item Ruby;
-	public static Item Turqouise;
+	public static Item RubyItem;
+	public static Item Turquoise;
 	public static Item Amber;
 	public static Item Platinum;
 	public static Item Topaz;
+	public static Item Titanium;
+	public static Item SapphireRefined;
+	public static Item ZirconRefined;
+	public static Item RubyRefined;
+	public static Item TurquoiseRefined;
+	public static Item AmberRefined;
+	public static Item PlatinumRefined;
+	public static Item TopazRefined;
+	public static Item TitaniumRefined;
+	
 	
 	//Declaring Initialization
 	@Init
@@ -46,21 +56,39 @@ public class mod_XMoOres {
 		
 		Sapphire = new OreItem(2500).setUnlocalizedName("Sapphire");
 		Zircon = new OreItem(2501).setUnlocalizedName("Zircon");
-		Ruby = new OreItem(2502).setUnlocalizedName("Ruby");
-		Turqouise = new OreItem(2503).setUnlocalizedName("Turqouise");
+		RubyItem = new OreItem(2502).setUnlocalizedName("RubyOre");
+		Turquoise = new OreItem(2503).setUnlocalizedName("Turquoise");
 		Amber = new OreItem(2504).setUnlocalizedName("Amber");
 		Platinum = new OreItem(2505).setUnlocalizedName("Platinum");
 		Topaz = new OreItem(2506).setUnlocalizedName("Topaz");
+		Titanium = new OreItem(2507).setUnlocalizedName("Titanium");
+		SapphireRefined = new OreItem(2700).setUnlocalizedName("ingotSapphire");
+		ZirconRefined = new OreItem(2701).setUnlocalizedName("ingotZircon");
+		RubyRefined = new OreItem(2702).setUnlocalizedName("ingotRuby");
+		TurquoiseRefined = new OreItem(2703).setUnlocalizedName("ingotTurquoise");
+		AmberRefined = new OreItem(2704).setUnlocalizedName("ingotAmber");
+		PlatinumRefined = new OreItem(2705).setUnlocalizedName("ingotPlatinum");
+		TopazRefined = new OreItem(2706).setUnlocalizedName("ingotTopaz");
+		TitaniumRefined = new OreItem(2707).setUnlocalizedName("ingotTitanium");
 		
 		//adding names
 		
 		LanguageRegistry.addName(Sapphire, "Sapphire");
 		LanguageRegistry.addName(Zircon, "Zircon");
-		LanguageRegistry.addName(Ruby, "Ruby");
-		LanguageRegistry.addName(Turqouise, "Turqouise");
+		LanguageRegistry.addName(RubyItem, "Ruby");
+		LanguageRegistry.addName(Turquoise, "Turquoise");
 		LanguageRegistry.addName(Amber, "Amber");
 		LanguageRegistry.addName(Platinum, "Platinum");
 		LanguageRegistry.addName(Topaz, "Topaz");
+		LanguageRegistry.addName(Titanium, "Titanium");
+		LanguageRegistry.addName(SapphireRefined, "Flawless Sapphire");
+		LanguageRegistry.addName(ZirconRefined, "Flawless Zircon");
+		LanguageRegistry.addName(RubyRefined, "Flawless Ruby");
+		LanguageRegistry.addName(TurquoiseRefined, "Flawless Turquoise");
+		LanguageRegistry.addName(AmberRefined, "Flawless Amber");
+		LanguageRegistry.addName(PlatinumRefined, "Refined Platinum");
+		LanguageRegistry.addName(TopazRefined, "Flawless Topaz");
+		LanguageRegistry.addName(TitaniumRefined, "Refined Titanium");
 		
 		//crafting
 	}
