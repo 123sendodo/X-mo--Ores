@@ -5,6 +5,7 @@ package XMoOres;
  */
 
 import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
 import net.minecraft.item.EnumToolMaterial;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemFood;
@@ -31,6 +32,7 @@ public class mod_XMoOres {
 	
 	//Telling forge that we are creating these
 	
+	public static final String XMoOres = "X-Mo' Ores";
 	public static Item Sapphire;
 	public static Item Zircon;
 	public static Item RubyItem;
@@ -47,7 +49,8 @@ public class mod_XMoOres {
 	public static Item PlatinumRefined;
 	public static Item TopazRefined;
 	public static Item TitaniumRefined;
-	
+	public static Block SapphireOre;
+	public static Block SapphireBlock;
 	
 	//Declaring Initialization
 	@Init
@@ -70,6 +73,8 @@ public class mod_XMoOres {
 		PlatinumRefined = new OreItem(2705).setUnlocalizedName("ingotPlatinum");
 		TopazRefined = new OreItem(2706).setUnlocalizedName("ingotTopaz");
 		TitaniumRefined = new OreItem(2707).setUnlocalizedName("ingotTitanium");
+		SapphireOre = new OreBlock(3000, Material.rock).setUnlocalizedName("Ore_Sapphire");
+		SapphireBlock = new BlockOre(3500, Material.iron).setUnlocalizedName("blockSapphire");
 		
 		//adding names
 		
@@ -89,6 +94,10 @@ public class mod_XMoOres {
 		LanguageRegistry.addName(PlatinumRefined, "Refined Platinum");
 		LanguageRegistry.addName(TopazRefined, "Flawless Topaz");
 		LanguageRegistry.addName(TitaniumRefined, "Refined Titanium");
+		GameRegistry.registerBlock(SapphireOre, XMoOres + SapphireOre.getUnlocalizedName2());
+		LanguageRegistry.addName(SapphireOre,  "Sapphire Ore");
+		GameRegistry.registerBlock(SapphireBlock, XMoOres + SapphireOre.getUnlocalizedName2());
+		LanguageRegistry.addName(SapphireBlock,  "Block of Sapphire");
 		
 		//crafting
 	}
