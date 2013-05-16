@@ -1,0 +1,15 @@
+package XMoOres;
+
+import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
+import net.minecraft.creativetab.CreativeTabs;
+
+public class OreBlock extends Block
+{
+  public OreBlock(int id, Material par2Material)
+	{
+		super(id, par2Material);
+		this.setCreativeTab(CreativeTabs.tabBlock);
+	}
+
+}
